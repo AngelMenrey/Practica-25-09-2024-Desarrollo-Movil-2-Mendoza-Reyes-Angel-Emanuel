@@ -1,5 +1,6 @@
 package com.example.practica_25_09_2024
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +26,7 @@ class FotoActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private val responseLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ activityResult ->
           if (activityResult.resultCode == RESULT_OK){
           Toast.makeText(this, "Foto tomada", Toast.LENGTH_SHORT).show()
